@@ -72,15 +72,24 @@ for(i=0;i<n;i++)
 void display() 
 { 
 int i;
+if(n==0)
+    printf("Array is Empty!!!\n");
+ else
+ {
  printf("\nThe array elements are:\n");
 for(i=0;i<n;i++) 
  printf("%d\t",a[i]); 
-} 
+ } 
+}
 
 
 //inserting an element into an array 
 void insert() 
 { 
+if(n==MAX_SIZE)
+    printf("Array size exceeded!!! Cannot insert one more element!!\n");
+else
+{
  printf("\nEnter the position for the new element:\t");
  scanf("%d",&pos); 
  printf("\nEnter the element to be inserted :\t"); 
@@ -92,11 +101,16 @@ for(i=n-1;i>=pos;i--)
  a[pos]=val; 
  n=n+1; 
 } 
+}
 
 
 //deleting an array element 
 void delete()
 { 
+if(n==0)
+    printf("Array is Empty!!! Cannot delete one more element!!\n");
+else
+{
  printf("\nEnter the position of the element to be deleted:\t"); 
  scanf("%d",&pos); 
  val=a[pos]; 
@@ -107,4 +121,4 @@ for(i=pos;i<n-1;i++)
  n=n-1; 
  printf("\nThe deleted element is =%d",val); 
 }
-
+}
