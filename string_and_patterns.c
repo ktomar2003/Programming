@@ -17,7 +17,16 @@ int main(void)
     }
 return 0;
 }
-
+**************************
+for(int i=10;i>=0;i--)    // FOR REVERSE
+{
+    for(int j=1;j<=i;j++)
+    {
+        printf(" %d",i);
+    }
+printf("\n");
+***************************
+}
 #include<stdio.h>
 int main(void)
 {
