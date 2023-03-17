@@ -1,3 +1,26 @@
+/*
+#include <stdio.h>
+
+int main() {
+  int a[10]={60,30,80,90,50,100,20,10,40,70};
+  for (int i = 0; i < 9; i++) {
+    int min = i;
+    for (int j = i + 1; j < 10; j++) {
+      if (a[j] < a[min])
+        min = j;
+    }
+    a[min]=a[min]^a[i];
+    a[i]=a[min]^a[i];
+    a[min]=a[min]^a[i];
+  }
+  printf("Sorted array in Acsending Order:\n");
+  for (int k = 0; k < 10; k++) {
+    printf("%d  ", a[k]);
+  }
+  return 0;
+}
+*/
+
 // Selection sort in C
 
 #include <stdio.h>
