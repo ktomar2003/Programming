@@ -1,4 +1,5 @@
 /*
+// NOT COMPLETELY WORKING (STILL NEED TO FIND OUT SOME INVALID INPUT PROBLEM IN THIS)
 #include <stdio.h>
 
 int main() {
