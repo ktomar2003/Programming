@@ -8,6 +8,8 @@ struct node
     struct node *right;
 };
 
+int c=0;
+
 typedef struct node* nodep;
 
 nodep new(int data)
@@ -26,6 +28,8 @@ void inorder (nodep ptr)
         inorder(ptr->left);
         printf("%d ",ptr->data);
         inorder(ptr->right);
+        if (ptr -> left == NULL && ptr -> right == NULL)
+            c++;
     }
 }
 
@@ -74,6 +78,18 @@ nodep insert(nodep node, int ele)
     return node;
 }
 
+int tree_h(nodep root) {
+    if (!root)
+        return 0;
+    else {
+        int left_h = tree_h(root->left);
+        int right_h = tree_h(root->right);
+        if (left_h >= right_h)
+            return left_h + 1;
+        else
+            return right_h + 1;
+    }
+}
 
 int main() {
     int n, data;
@@ -97,5 +113,11 @@ int main() {
     printf("\nPostorder traversal of the BST: ");
     postorder(root);
 
+    printf("\nNo. of nodes : %d\n",n);
+    printf("\nNo. of leaf node : %d\n",c);
+
+    int ht=tree_h(root);
+    printf("\nHeight of the tree is : %d ",ht);
+    
     return 0;
 }
