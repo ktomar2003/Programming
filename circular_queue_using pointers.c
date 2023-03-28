@@ -18,7 +18,7 @@ int iscqueuefull(CQu *cq)
 
 int iscqueueempty(CQu *cq)
 {
-    if(cq->rear==cq->front)
+    if(cq->rear<cq->front)
         return 1;
     return 0;
 }
@@ -57,6 +57,7 @@ int main()
         insertcqueue(&cq,6);
         insertcqueue(&cq,7);
         insertcqueue(&cq,8);
+        insertcqueue(&cq,9);
     }
     if (iscqueueempty(&cq))
         printf("CQueue is Empty !!!");
