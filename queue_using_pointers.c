@@ -25,13 +25,15 @@ int isqueueempty(Qu *q)
 
 void insertqueue(Qu *q, int ele)
 {
-    q->items[++q->rear]=ele;
+    int item=++q->rear;
+    q->items[item]=ele;
 }
 
 int deletequeue(Qu *q)
 {
     int ele;
-    ele=q->items[q->front++];
+    ele=q->items[q->front];
+    q->front++;
     return ele;
 }
 
