@@ -37,8 +37,10 @@ int deletequeue(Qu *q)
 
 void displayqueue(Qu *q)
 {
+    printf("front -> ");
     for(int i=q->front;i<=q->rear;i++)
         printf("%d ",q->items[i]);
+    printf("<-rear\n");
 }
 
 int main()
@@ -49,12 +51,18 @@ int main()
     int ele;
     if (isqueuefull(&q))
         printf("Queue is full !!!");
-    else
+    else{
         insertqueue(&q,5);
+        insertqueue(&q,6);
+        insertqueue(&q,7);
+        insertqueue(&q,8);
+    }
     if (isqueueempty(&q))
         printf("Queue is Empty !!!");
     else
     {
+        ele=deletequeue(&q);
+        printf("Removed ele = %d\n",ele);
         ele=deletequeue(&q);
         printf("Removed ele = %d\n",ele);
     }
