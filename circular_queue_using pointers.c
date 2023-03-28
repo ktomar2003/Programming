@@ -1,3 +1,4 @@
+// Still concept is blurry, the program is not completely correct (Please look into it)
 #include <stdio.h>
 #define MAX 5
 
