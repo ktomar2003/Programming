@@ -27,7 +27,14 @@ void insert(node **head, int ele)
     p->next=*head;
 }
 
-
+void delete(node **head)
+{
+    node *p;
+    p=*head;
+    while (p->next!=NULL)
+        p=p->next;
+    p->next=NULL;
+}
 
 int main(void)
 {
@@ -38,6 +45,7 @@ int main(void)
     insert(&head,ele1);
     insert(&head,ele2);
     
+    delete(&head);
     
     return 0;
 }
