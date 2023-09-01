@@ -15,7 +15,7 @@ int main()
     int pos,ele;
     printf("\nPOS?");
     scanf("%d",&pos);
-    //printf("\nELE?"); {OPTIONA FOR DELETION}
+    //printf("\nELE?"); {OPTIONAL FOR DELETION}
     //scanf("%d",&ele);
     
     if (pos<=0 || pos>=n)
