@@ -73,6 +73,21 @@ print(np.nanvar(d22))
 print("******************************************")
 
 '''
+Q. What is the difference between average and mean functions in the python numpy library?
+import numpy as np
+arr = np.array([1,2,3,4,5,6,7,8,9,10])
+print("Array : ",arr,"\n")
+print("Mean of the Array : ",np.average(arr),"\n")
+weight = np.array([4,5,6,12,15,10,2,8,19,20])
+print("Weight average of Array : ",np.average(arr, weights=weight))
+Output
+
+Array :  [ 1  2  3  4  5  6  7  8  9 10] 
+Mean of the Array :  5.5 
+Weight average of Array :  6.574257425742574
+'''
+
+'''
 Output:->
 
 [-1 -2 -3]
