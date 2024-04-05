@@ -1,5 +1,4 @@
 import numpy as np
-
 d1=np.array([-1,-2,-3])
 d2=np.array([[1,2,3],[4,5,6]])
 d21=np.array([[7,8],[9,10],[11,12]])
@@ -52,6 +51,8 @@ print(np.matmul(d2,d21))
 print(np.matmul(d2,d22))
 
 print("******************************************")
+
+d22=np.array([[7,8,9],[10,11,12],[13,14,15]])
 
 print(np.min(d22))
 print(np.max(d22))
